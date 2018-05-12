@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eZl-Cm-xaH">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spoqa Han Sans Bold.ttf">
+            <string>SpoqaHanSans-Bold</string>
+        </array>
+        <array key="Spoqa Han Sans Regular.ttf">
+            <string>SpoqaHanSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--스토리그램-->
+        <scene sceneID="KzZ-Yd-bh1">
+            <objects>
+                <viewController id="sVq-uR-l8V" customClass="MovieStatusViewController" customModule="storygram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Js8-EI-LhY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="QAi-hQ-XiS">
+                                <rect key="frame" x="0.0" y="-64" width="375" height="788"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8o-gP-DOc">
+                                <rect key="frame" x="0.0" y="643" width="291" height="1"/>
+                                <color key="backgroundColor" red="0.84696626659999996" green="0.84711211919999996" blue="0.84695702790000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6wB-zk-Cbu"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g09-TK-Mbt">
+                                <rect key="frame" x="299" y="621" width="76" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g09-TK-Mbt" secondAttribute="height" multiplier="76:45" id="FRl-G8-eD6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSans-Bold" family="SpoqaHanSans" pointSize="22"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="RelayStartButton:" destination="sVq-uR-l8V" eventType="touchUpInside" id="mjF-34-UPH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="Ffi-wS-GCY">
+                                <rect key="frame" x="16" y="392" width="181" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ffi-wS-GCY" secondAttribute="height" multiplier="181:97" id="Zuy-eP-f4G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0명 참여중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnO-qB-KIX">
+                                <rect key="frame" x="16" y="528" width="343" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZnO-qB-KIX" secondAttribute="height" multiplier="343:26" id="7jY-EG-pWV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="17"/>
+                                <color key="textColor" red="0.99287563562393188" green="0.99362605810165405" blue="0.9929918646812439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다음 릴레이까지 00:00 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-Ty-EEW">
+                                <rect key="frame" x="16" y="572" width="343" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2i1-Ty-EEW" secondAttribute="height" multiplier="343:26" id="61W-A1-uwV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="17"/>
+                                <color key="textColor" red="0.97592848539352417" green="0.97325938940048218" blue="0.97603994607925415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="O8o-gP-DOc" firstAttribute="leading" secondItem="Js8-EI-LhY" secondAttribute="leading" id="4em-AD-Qr8"/>
+                            <constraint firstItem="g09-TK-Mbt" firstAttribute="trailing" secondItem="mSw-AD-VbJ" secondAttribute="trailing" id="As8-HN-Ktl"/>
+                            <constraint firstItem="g09-TK-Mbt" firstAttribute="top" secondItem="2i1-Ty-EEW" secondAttribute="bottom" constant="23" id="FHt-V5-q9p"/>
+                            <constraint firstItem="2i1-Ty-EEW" firstAttribute="top" secondItem="ZnO-qB-KIX" secondAttribute="bottom" constant="18" id="GlZ-er-awC"/>
+                            <constraint firstItem="2i1-Ty-EEW" firstAttribute="leading" secondItem="mSw-AD-VbJ" secondAttribute="leading" constant="16" id="K1c-qe-Dj2"/>
+                            <constraint firstItem="mSw-AD-VbJ" firstAttribute="trailing" secondItem="Ffi-wS-GCY" secondAttribute="trailing" constant="178" id="Kyy-Kb-BnX"/>
+                            <constraint firstItem="mSw-AD-VbJ" firstAttribute="trailing" secondItem="ZnO-qB-KIX" secondAttribute="trailing" constant="16" id="MMB-og-RVc"/>
+                            <constraint firstItem="mSw-AD-VbJ" firstAttribute="bottom" secondItem="g09-TK-Mbt" secondAttribute="bottom" constant="24" id="Ptk-Dy-M9B"/>
+                            <constraint firstItem="QAi-hQ-XiS" firstAttribute="trailing" secondItem="mSw-AD-VbJ" secondAttribute="trailing" id="QKk-ZC-GHQ"/>
+                            <constraint firstItem="QAi-hQ-XiS" firstAttribute="top" secondItem="Js8-EI-LhY" secondAttribute="top" constant="-64" id="SvW-cK-GDv"/>
+                            <constraint firstItem="QAi-hQ-XiS" firstAttribute="bottom" secondItem="mSw-AD-VbJ" secondAttribute="bottom" constant="34" id="Wsb-O0-Mty"/>
+                            <constraint firstItem="O8o-gP-DOc" firstAttribute="top" secondItem="g09-TK-Mbt" secondAttribute="bottom" constant="-23" id="g8G-6v-xwe"/>
+                            <constraint firstItem="g09-TK-Mbt" firstAttribute="leading" secondItem="O8o-gP-DOc" secondAttribute="trailing" constant="8" id="lSR-Rv-p2d"/>
+                            <constraint firstItem="ZnO-qB-KIX" firstAttribute="top" secondItem="Ffi-wS-GCY" secondAttribute="bottom" constant="39" id="qfP-JB-nnE"/>
+                            <constraint firstItem="QAi-hQ-XiS" firstAttribute="leading" secondItem="mSw-AD-VbJ" secondAttribute="leading" id="tul-vN-IPl"/>
+                            <constraint firstItem="mSw-AD-VbJ" firstAttribute="trailing" secondItem="2i1-Ty-EEW" secondAttribute="trailing" constant="16" id="vJP-xK-IYC"/>
+                            <constraint firstItem="ZnO-qB-KIX" firstAttribute="leading" secondItem="mSw-AD-VbJ" secondAttribute="leading" constant="16" id="w3K-B8-atq"/>
+                            <constraint firstItem="Ffi-wS-GCY" firstAttribute="leading" secondItem="mSw-AD-VbJ" secondAttribute="leading" constant="16" id="z6V-uz-GIy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mSw-AD-VbJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="스토리그램" id="jc6-AU-z4V"/>
+                    <connections>
+                        <outlet property="joiningPeopleLabel" destination="ZnO-qB-KIX" id="KCp-HY-afz"/>
+                        <outlet property="remainTimeLabel" destination="2i1-Ty-EEW" id="qke-ym-gjx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siM-wr-4ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="152"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="puk-U2-pXx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZl-Cm-xaH" customClass="BaseNavigationController" customModule="storygram" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bDF-pM-dmK">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sVq-uR-l8V" kind="relationship" relationship="rootViewController" id="vCa-VC-P4a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YO2-ZH-jJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.400000000000006" y="152.92353823088456"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+        <image name="title" width="181" height="97"/>
+    </resources>
+</document>

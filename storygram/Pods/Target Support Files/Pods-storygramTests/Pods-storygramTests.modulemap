@@ -1,0 +1,6 @@
+framework module Pods_storygramTests {
+  umbrella header "Pods-storygramTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
